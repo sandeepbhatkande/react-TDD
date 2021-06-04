@@ -1,5 +1,4 @@
 import React from 'react';
-import MessageContainer from 'js/modules/message/components/MessageContainer.js';
 import { GLOBAL_CONSTANTS } from 'js/common/constants/GlobalConstants';
 import AppHelper from 'js/app/AppHelper';
 import { changeLanguage } from 'I18N/I18NHelper';
@@ -33,13 +32,6 @@ class App extends React.Component {
         return (
             <React.Fragment>
                 <div>Welcome to app</div>
-                <MessageContainer store={this.props.store} />
-                {
-                    this.props.appData && this.props.appData.showMask &&
-                    <div className='app_mask full_width full_height'>
-                        <img src='svg/loading.svg' className='vertical_align' alt='Loading'></img>
-                    </div>
-                }
             </React.Fragment>
         )
     };
